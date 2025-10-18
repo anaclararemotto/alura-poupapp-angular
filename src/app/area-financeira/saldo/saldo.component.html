@@ -1,11 +1,12 @@
-<section class="saldo-card">
-  <div class="titulo-wrapper">
-    <h2 class="texto-lg">Saldo disponível:</h2>
-  </div>
+<app-card >
+ 
+  <!-- <ng-container agrupa elementos html sem criar um novo elemento no DOM -->
+  <ng-container card-titulo>
+     <img  src="icones/saldo.svg" alt="">
+    <h2  class="texto-lg">Saldo disponível:</h2>
+  </ng-container>
 
-  <div class="corpo-card" >
-    <span class="valor texto-xxxl" [appDestaqueValorNumerico]="saldo()" corPositiva="var(--violeta-destaque)">
+  <span class="valor texto-xxxl" [appDestaqueValorNumerico]="saldo()" corPositiva="var(--violeta-destaque)">
       {{ saldo() | currency:"BRL" }}
     </span>
-  </div>
-</section>
+</app-card>
